@@ -1,0 +1,15 @@
+
+@mixin placeholder(){
+	::-webkit-input-placeholder {
+	   color: $color_form;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $color_form;  
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $color_form;  
+	}
+	:-ms-input-placeholder {  
+	   color: $color_form;  
+	}
+}
