@@ -6,10 +6,11 @@
 /*navbar*/
 .navbar-dark{
     .navbar-nav{
-        .nav-link{
+        .nav-link, .dropdown-menu{
             font-size: 0.7rem;
         }
     }
+    .navbar-brand{font-size: 1.4rem;}
     .btn{
         font-size: 0.7rem;
     }
@@ -26,7 +27,19 @@
     height: 100vh;
     .text-hero{
         height: 100vh;
+        a{
+            font-size: 0.7rem;
+            color: $principal;
+            i{
+                font-size: 1.9rem;
+                top: 0.3rem;
+                position: relative;
+            }
+        }
     }
+}
+.dropdown-toggle::after{
+    display:none;
 }
 /*formulario*/
 .form-control{
@@ -66,8 +79,15 @@
     font-size: 0.85rem;
     &.collapsed{
         font-weight: 100;
+        .arrowCollapse{
+            @include rotate(180deg);
+        }
+        .active{
+            @include rotate(180deg);
+        }
     }
 }
+
 #five-section img{
     box-shadow: 18px 16px 19px -11px #00000045;
 }
@@ -98,6 +118,11 @@ footer{
     }
     .footer-section{
         font-size: 0.7rem;
+        i,a{color:$texto;
+        &:hover{
+            color: black;
+        }
+        }
     }
 
 }
@@ -105,4 +130,6 @@ footer{
     html{
         font-size: 19px;
     }
+    .bg-dark{background-color:transparent !important; }
+
 }

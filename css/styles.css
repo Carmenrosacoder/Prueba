@@ -13,8 +13,11 @@ p {
 }
 
 /*navbar*/
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav .dropdown-menu {
   font-size: 0.7rem;
+}
+.navbar-dark .navbar-brand {
+  font-size: 1.4rem;
 }
 .navbar-dark .btn {
   font-size: 0.7rem;
@@ -32,6 +35,19 @@ p {
 }
 .hero .text-hero {
   height: 100vh;
+}
+.hero .text-hero a {
+  font-size: 0.7rem;
+  color: white;
+}
+.hero .text-hero a i {
+  font-size: 1.9rem;
+  top: 0.3rem;
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: none;
 }
 
 /*formulario*/
@@ -88,6 +104,28 @@ p {
 #accordion h5 .btn.collapsed {
   font-weight: 100;
 }
+#accordion h5 .btn.collapsed .arrowCollapse {
+  -webkit-transform: rotate(180deg);
+  /* Safari and Chrome */
+  -moz-transform: rotate(180deg);
+  /* Firefox */
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -o-transform: rotate(180deg);
+  /* Opera */
+  transform: rotate(180deg);
+}
+#accordion h5 .btn.collapsed .active {
+  -webkit-transform: rotate(180deg);
+  /* Safari and Chrome */
+  -moz-transform: rotate(180deg);
+  /* Firefox */
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -o-transform: rotate(180deg);
+  /* Opera */
+  transform: rotate(180deg);
+}
 
 #five-section img {
   box-shadow: 18px 16px 19px -11px #00000045;
@@ -127,10 +165,20 @@ footer ul li, footer p li {
 footer .footer-section {
   font-size: 0.7rem;
 }
+footer .footer-section i, footer .footer-section a {
+  color: #727272;
+}
+footer .footer-section i:hover, footer .footer-section a:hover {
+  color: black;
+}
 
 @media screen and (min-width: 576px) {
   html {
     font-size: 19px;
+  }
+
+  .bg-dark {
+    background-color: transparent !important;
   }
 }
 
